@@ -1,17 +1,17 @@
 import React, { type MouseEventHandler } from 'react'
 
 interface ActionBtnProps {
-    onClick: MouseEventHandler<HTMLButtonElement>;
-    className: string;
-    backgroundColor: string;
+    handleAdd: MouseEventHandler<HTMLButtonElement>;
+    handleDelete: MouseEventHandler<HTMLButtonElement>;
+    handleClear: MouseEventHandler<HTMLButtonElement>;
 }
 
-const ActionBtn: React.FC<ActionBtnProps> = ({ onClick, className, backgroundColor}) => {
+const ActionBtn: React.FC<ActionBtnProps> = ({ handleAdd, handleDelete, handleClear }) => {
   return (
     <div>
-        <button onClick={onClick}>Add</button>
-        <button className={className}>Delete</button>
-        <button style={{backgroundColor}}>Clear</button>
+        <button onClick={handleAdd}>Add</button>
+        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleClear}>Clear</button>
     </div>
   )
 }
