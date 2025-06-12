@@ -1,12 +1,8 @@
-import React, { type MouseEventHandler } from 'react'
+import React, { useContext } from 'react'
+import { BtnContext } from './App';
 
-interface ActionBtnProps {
-    handleAdd: MouseEventHandler<HTMLButtonElement>;
-    handleDelete: MouseEventHandler<HTMLButtonElement>;
-    handleClear: MouseEventHandler<HTMLButtonElement>;
-}
-
-const ActionBtn: React.FC<ActionBtnProps> = ({ handleAdd, handleDelete, handleClear }) => {
+const ActionBtn: React.FC = () => {
+    const {handleAdd, handleDelete, handleClear} = useContext(BtnContext);
   return (
     <div>
         <button onClick={handleAdd}>Add</button>

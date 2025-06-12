@@ -14,16 +14,16 @@ const handleClear = () => {
   alert("Cleared"); 
 }
 
-export const BtnContext = React.createContext();
+export const BtnContext = React.createContext<any>(undefined);
 
 function App() {
   return (
     <>
       <h1>Hello</h1>
       {/* <ActionBtn handleAdd={handleAdd} handleDelete={handleDelete} handleClear={handleClear}/> */}
-      <BtnContext.provider value={handleAdd, handleDelete, handleClear}>
+      <BtnContext.Provider value={{handleAdd, handleDelete, handleClear}}>
         <ActionBtn />
-      </BtnContext>
+      </BtnContext.Provider>
     </>
   )
 }
