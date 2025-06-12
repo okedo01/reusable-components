@@ -1,8 +1,16 @@
 import ActionBtn from './ActionBtn'
 import './App.css'
 
-const handleClick = () => {
-  alert("clicked"); 
+const handleAdd = () => {
+  alert("Added"); 
+}
+
+const handleDelete = () => {
+  alert("Deleted"); 
+}
+
+const handleClear = () => {
+  alert("Cleared"); 
 }
 
 function App() {
@@ -10,7 +18,7 @@ function App() {
   return (
     <>
       <h1>Hello</h1>
-      <ActionBtn onClick={handleClick} className="btn" backgroundColor="green"/>
+      <ActionBtn handleAdd={handleAdd} handleDelete={handleDelete} handleClear={handleClear}/>
     </>
   )
 }
