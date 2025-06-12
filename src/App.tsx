@@ -1,12 +1,16 @@
+import ActionBtn from './ActionBtn'
 import './App.css'
-import Button from './Button'
+
+const handleClick = () => {
+  alert("clicked"); 
+}
 
 function App() {
 
   return (
     <>
       <h1>Hello</h1>
-      <h2><Button /></h2>
+      <ActionBtn onClick={handleClick} className="btn" backgroundColor="green"/>
     </>
   )
 }

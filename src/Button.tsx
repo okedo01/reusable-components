@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { type MouseEventHandler } from 'react'
+import ActionBtn from './ActionBtn';
 
-const Button: React.FC = () => {
+interface ButtonProps {
+    onClick: MouseEventHandler<HTMLButtonElement>;
+    className: string;
+    color: string;
+}
+
+const Button: React.FC<ButtonProps> = ({onClick, className, color="red"}) => {
   return (
-    <div>Button</div>
+    <div>
+        <ActionBtn onClick={onClick} backgroundColor={color} className={className}/>
+    </div>
   )
 }
 
