@@ -1,11 +1,11 @@
-interface Tournaments {
+export interface Tournaments {
   league: string;
   season: string;
   teams: Team[];
   recentMatches: RecentMatch[];
 }
 
-interface Team {
+export interface Team {
   id: number;
   name: string;
   stadium: string;
@@ -13,7 +13,7 @@ interface Team {
   players: Player[];
 }
 
-interface Player {
+export interface Player {
   id: number;
   name: string;
   position: string;
@@ -24,7 +24,7 @@ interface Player {
   tackles?: number;
 }
 
-interface RecentMatch {
+export interface RecentMatch {
   matchId: number;
   date: string;
   homeTeam: string;

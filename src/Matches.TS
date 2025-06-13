@@ -1,4 +1,6 @@
-const tournaments: Tournaments[] = [
+import type { Tournaments } from "./Types"
+
+export const tournaments: Tournaments[] = [
   {
   "league": "Premier League",
   "season": "2024/2025",
