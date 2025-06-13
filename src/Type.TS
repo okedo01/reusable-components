@@ -1,35 +1,34 @@
-interface tournament {
-    league: string;
-    season: string;
-    teams: [];
-    players: [];
-    resentMatches: [];
-    scorers: string[];
+interface Tournaments {
+  league: string;
+  season: string;
+  teams: Team[];
+  recentMatches: RecentMatch[];
 }
 
-interface teams {
-    id: number;
-    name: string;
-    stadium: string;
-    coach: string;
+interface Team {
+  id: number;
+  name: string;
+  stadium: string;
+  coach: string;
+  players: Player[];
 }
 
-interface Players {
-    id: number;
-    name: string;
-    position: string;
-    age: number;
-    nationality: string;
-    goals: number;
-    assists: number;
-    tackles: number;
+interface Player {
+  id: number;
+  name: string;
+  position: string;
+  age: number;
+  nationality: string;
+  goals?: number;
+  assists?: number;
+  tackles?: number;
 }
 
-interface resentMatches {
-    matchId: number;
-    date: string;
-    homeTeam: string;
-    awayTeam: string;
-    score: string;
-    scorers: string[];
+interface RecentMatch {
+  matchId: number;
+  date: string;
+  homeTeam: string;
+  awayTeam: string;
+  score: string;
+  scorers: string[];
 }

@@ -1,4 +1,4 @@
-const matches = [
+const tournaments: Tournaments[] = [
   {
   "league": "Premier League",
   "season": "2024/2025",
