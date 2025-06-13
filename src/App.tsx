@@ -6,7 +6,7 @@ import Results from './Results'
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <h1>English Premier League</h1>
       <Headings name="React Reusable Components" />
       <InputFields type="text" placeholder="Enter your name"/>
       <InputFields type="number" placeholder="Enter year number"/>

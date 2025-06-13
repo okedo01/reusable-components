@@ -15,7 +15,7 @@ const Results: React.FC = () => {
 
                         { team.players.map((player) => (
                             <h4 key={player.id} style={{background: "gray",color: "white", maxHeight: "400px"}}>
-                                { player.name } having the following properties: 
+                                { player.name } has the following properties: 
                                 <p>Nationality: { player.nationality } </p>
                                 <p>Age: { player.age } years old</p>
                                 <p>Position: { player.position } </p>
