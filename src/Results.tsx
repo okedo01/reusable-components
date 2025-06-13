@@ -5,18 +5,29 @@ import { tournaments } from "./Matches"
 const Results: React.FC = () => {
   return (
     <div>
-        <ul>
-            { tournaments.map((tournament: Tournaments) => (
-                <li key={tournament.league}>
-                    <h2>{ tournament.league } - { tournament.season }</h2>
-                    { tournament.teams.map((team) => (
-                        <p key={team.id}>
-                            { team.name } - { team.stadium }
-                        </p>
-                    ))}
-                </li>
-            ))}
-        </ul>
+        { tournaments.map((tournament: Tournaments) => (
+            <h2 key={tournament.league}> 
+                { tournament.league } - { tournament.season }
+
+                { tournament.teams.map((team) => (
+                    <p key={team.id}>
+                        { team.name } in { team.stadium } with their coacher { team.coach }
+
+                        { team.players.map((player) => (
+                            <h4 key={player.id}>
+                                { player.name } having the following properties: 
+                                <p>Nationality: { player.nationality } </p>
+                                <p>Age: { player.age } years old</p>
+                                <p>Position: { player.position } </p>
+                                <p> { player.goals } goals conceded in the whole season</p>
+                                <p>Assists { player.assists } </p>
+                                <p> { player.tackles } tackles</p>
+                            </h4>
+                        ))}
+                    </p>
+                ))}
+            </h2>
+        ))}
     </div>
   )
 }
