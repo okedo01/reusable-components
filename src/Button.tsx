@@ -1,5 +1,4 @@
 import React, { type MouseEventHandler } from 'react'
-import ActionBtn from './ActionBtn';
 
 interface ButtonProps {
     handleAdd: MouseEventHandler<HTMLButtonElement>;

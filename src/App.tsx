@@ -1,29 +1,12 @@
-import React, { createContext } from 'react'; 
-import ActionBtn from './ActionBtn'
 import './App.css'
-
-const handleAdd = () => {
-  alert("Added"); 
-}
-
-const handleDelete = () => {
-  alert("Deleted"); 
-}
-
-const handleClear = () => {
-  alert("Cleared"); 
-}
-
-export const BtnContext = React.createContext<any>(undefined);
+import Headings from './Headings'
 
 function App() {
   return (
     <>
       <h1>Hello</h1>
-      {/* <ActionBtn handleAdd={handleAdd} handleDelete={handleDelete} handleClear={handleClear}/> */}
-      <BtnContext.Provider value={{handleAdd, handleDelete, handleClear}}>
-        <ActionBtn />
-      </BtnContext.Provider>
+      <Headings name="React Reusable Components" />
+      <Headings name="Input Fields Results" />
     </>
   )
 }

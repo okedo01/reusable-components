@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Headings: React.FC = () => {
+interface HeadingsProps {
+    name: string;
+}
+
+const Headings: React.FC<HeadingsProps> = ({ name }) => {
   return (
-    <div>Headings</div>
+    <div>{ name }</div>
   )
 }
 
