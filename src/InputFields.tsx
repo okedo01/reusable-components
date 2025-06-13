@@ -1,8 +1,15 @@
 import React from 'react'
 
-const InputFields: React.FC = () => {
+interface InputFieldsProps {
+    type: string;
+    placeholder: string;
+}
+
+const InputFields: React.FC<InputFieldsProps> = ({ type, placeholder}) => {
   return (
-    <div>InputFields</div>
+    <div>
+        <input type={type} placeholder={placeholder} />
+    </div>
   )
 }
 
