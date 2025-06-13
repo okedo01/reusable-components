@@ -10,7 +10,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({handleAdd, handleDelete, handleClear}) => {
   return (
     <div>
-        <ActionBtn handleAdd={handleAdd} handleDelete={handleDelete} handleClear={handleClear}/>
+        <ActionBtn handleAdd={handleAdd} handleDelete={handleDelete} handleClear={handleClear} />
     </div>
   )
 }
