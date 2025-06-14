@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface InputFieldsProps {
     type: string;
@@ -6,9 +6,11 @@ interface InputFieldsProps {
 }
 
 const InputFields: React.FC<InputFieldsProps> = ({ type, placeholder}) => {
+  const [ searchTerm, setSearchTerm ] = useState("");
   return (
     <div>
-        <input type={type} placeholder={placeholder} />
+        <input type={type} placeholder={placeholder} onChange={(e) => setSearchTerm(e.target.value)}/>
+        { searchTerm }
     </div>
   )
 }
