@@ -5,7 +5,7 @@ import Results from './Results'
 
 interface searchTermProps {
   searchTerm: any;
-  setSearchTerm: () => void;
+  setSearchTerm: (value: string) => void;
 }
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
     <>
       <h1>English Premier League</h1>
       <Headings name="React Reusable Components" />
-      <InputFields type="text" placeholder="Enter your name" searchTerm={searchTerm} searcTermFunc={setSearchTerm}/>
-      <InputFields type="number" placeholder="Enter year number"/>
+      <InputFields type="text" placeholder="Enter your name" searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+      <InputFields type="number" placeholder="Enter year number" searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
       <Headings name="Input Fields Results" />
       <Results />
     </>
